@@ -13,8 +13,6 @@ const initialState = {
   optionToHide: null,
 };
 
-console.log(initialState);
-
 const quizReducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_STAGE":
@@ -27,9 +25,7 @@ const quizReducer = (state, action) => {
       let quizQuestions = null;
 
       state.questions.forEach((question) => {
-        if (question.category === action.payload) {
-          quizQuestions = question.questions;
-        }
+        quizQuestions = question.questions;
       });
 
       return {
@@ -96,10 +92,6 @@ const quizReducer = (state, action) => {
 
     case "REMOVE_OPTION": {
       const questionWithoutOption = state.questions[state.currentQuestion];
-
-      console.log(state.currentQuestion);
-
-      console.log(questionWithoutOption);
 
       let repeat = true;
       let optionToHide;

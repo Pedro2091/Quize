@@ -1,20 +1,35 @@
 #gameover {
-  text-align: center;
-  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-height: 100%;
+}
+
+#overgame {
   display: flex;
   flex-direction: column;
-}
-
-#gameover h2,
-#gameover p {
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 #gameover p {
-  color: #8435de;
+  margin-bottom: 16px;
+  font-size: 20px;
 }
 
-#gameover img {
-  margin: 2rem auto;
-  height: 200px;
+#gameover button {
+  padding: 8px 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 16px;
+  background-color: #CFEAE5;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+#gameover button:hover{
+  background-color: #D4E4F4;
+  transition: .2s linear;
 }

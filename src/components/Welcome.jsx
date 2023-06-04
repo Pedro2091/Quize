@@ -3,19 +3,31 @@ import { QuizContext } from "../context/quiz";
 
 import "./Welcome.css";
 
-import Quiz from "../img/quiz.svg";
+import Logo from "../img/logo.svg";
+import Kids from "../img/kids.svg";
 
 const Welcome = () => {
   const [quizState, dispatch] = useContext(QuizContext);
 
+  function chooseCategoryAndReorderQuestions(category) {
+    dispatch({ type: "START_GAME", payload: category });
+    dispatch({ type: "REORDER_QUESTIONS" });
+  }
+
   return (
     <div id="welcome">
-      <h2>Seja bem-vindo</h2>
-      <p>Clique no botão abaixo para começar:</p>
-      <button onClick={() => dispatch({ type: "CHANGE_STAGE" })}>
-        Iniciar
-      </button>
-      <img src={Quiz} alt="Início do Quiz" />
+      <div id="inicio">
+        <img src={Logo} width={"50%"}/>
+        <button onClick={() => chooseCategoryAndReorderQuestions("HTML")}>
+          Começar
+        </button>
+        <button>
+          Créditos
+        </button>
+      </div>
+      {/* <div id="dialog">
+        <img src={Kids}/>
+      </div> */}
     </div>
   );
 };

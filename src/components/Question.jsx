@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import { QuizContext } from "../context/quiz";
 
@@ -18,42 +18,46 @@ const Question = () => {
   };
 
   console.log(quizState.optionToHide);
-
+  
   return (
-    <div id="question">
-      <p>
-        Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}
-      </p>
-      <h2>{currentQuestion.question}</h2>
-      <div id="options-container">
-        {currentQuestion.options.map((option) => (
-          <Option
-            option={option}
-            key={option}
-            answer={currentQuestion.answer}
-            selectOption={() => onSelectOption(option)}
-            hide={quizState.optionToHide === option ? "hide" : null}
-          />
-        ))}
-      </div>
-      {!quizState.answerSelected && !quizState.help && (
-        <>
-          {currentQuestion.tip && (
-            <button onClick={() => dispatch({ type: "SHOW_TIP" })}>Dica</button>
+    <div id="pai">
+      <div>
+        <div id="question">
+          <h1>Quize</h1>
+          <h6>Leia a questão e clique na resposta correta.</h6>
+          <div id="pergunta">
+            <div id="number">{quizState.currentQuestion + 1}</div>
+            <h3>{currentQuestion.question}</h3>
+          </div>
+          <div id="imagem-pergunta">
+            { currentQuestion.image &&
+              <img src={currentQuestion.image} alt="" width="200" height="auto"/>
+            }
+          </div>
+
+          <div id="options-container">
+            {currentQuestion.options.map((option) => (
+              <Option
+                option={option}
+                key={option}
+                answer={currentQuestion.answer}
+                selectOption={() => onSelectOption(option)}
+                hide={quizState.optionToHide === option ? "hide" : null}
+              />
+            ))}
+          </div>
+          {quizState.answerSelected && (
+            <button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
+              Continuar
+            </button>
           )}
-          <button onClick={() => dispatch({ type: "REMOVE_OPTION" })}>
-            Excluir uma
-          </button>
-        </>
-      )}
-      {!quizState.answerSelected && quizState.help === "tip" && (
-        <p>{currentQuestion.tip}</p>
-      )}
-      {quizState.answerSelected && (
-        <button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
-          Continuar
-        </button>
-      )}
+        </div>
+        <div id="quantidade-pergunta">
+          <p style={{fontWeight: "550"}}>
+            Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

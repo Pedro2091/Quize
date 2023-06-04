@@ -1,90 +1,35 @@
 const data = [
   {
-    category: "HTML",
     questions: [
       {
-        question: "Qual tag cria um parágrafo?",
-        options: ["<p>", "<h1>", "<text>", "<ul>"],
-        answer: "<p>",
-        tip: "É uma tag de uma letra apenas",
+        question: "Qual animal é o rei da floresta?",
+        image: "https://dbdzm869oupei.cloudfront.net/img/sticker/preview/35597.png",
+        options: ["Pig", "Lion", "Monkey", "Dog"],
+        answer: "Lion",
       },
       {
-        question: "Qual atributo adiciona um link para a tag a?",
-        options: ["alt", "href", "src", "link"],
-        answer: "href",
-        tip: "Hyperlink Reference",
+        question: "Qual animal é cor de rosa?",
+        image: "https://png.pngtree.com/png-clipart/20201208/big/pngtree-pig-clipart-cute-fat-pig-cartoon-vector-animal-material-png-image_5538469.png",
+        options: ["Lion", "Pig", "Dog", "Cat"],
+        answer: "Pig",
       },
       {
-        question: "As listas não ordenadas tem a tag de:",
-        options: ["<ol>", "<ul>", "<li>", "<list>"],
-        answer: "<ul>",
+        question: "Qual animal é o melhor amigo do homem?",
+        image: "https://images.vexels.com/media/users/3/213471/isolated/preview/5e32145777dc84a79280e12d0dfa2dab-cachorro-olhando-fofo.png",
+        options: ["Cat", "Dog", "Girafa", "Fish"],
+        answer: "Dog",
       },
       {
-        question: "Qual atributo deixa o input obrigatório?",
-        options: ["placeholder", "value", "required", "maxlength"],
-        answer: "required",
+        question: "Qual animal é fofinho e adora cenoura?",
+        image: "https://images.vexels.com/media/users/3/293547/isolated/preview/c3aa3d22c9b55586eb9ce655c2afdcde-coelho-sentado-bonito-animal-de-desenho-animado.png",
+        options: ["Rabit", "Lion", "Monkey", "Dog"],
+        answer: "Rabit",
       },
       {
-        question: "A tag semântica indicada para rodapés é a:",
-        options: ["div", "main", "section", "footer"],
-        answer: "footer",
-      },
-    ],
-  },
-  {
-    category: "CSS",
-    questions: [
-      {
-        question: "Qual regra altera a cor de um elemento?",
-        options: ["color", "background-color", "font-size", "transition"],
-        answer: "color",
-        tip: "Cor em inglês",
-      },
-      {
-        question: "Para aumentar a fonte de um elemento utilizamos:",
-        options: ["font", "text-transform", "font-size", "hover"],
-        answer: "font-size",
-      },
-      {
-        question: "A posição que deixa um elemento fixo é a:",
-        options: ["static", "absolute", "fixed", "relative"],
-        answer: "fixed",
-      },
-    ],
-  },
-  {
-    category: "JavaScript",
-    questions: [
-      {
-        question: "O que é Vanilla JavaScript?",
-        options: [
-          "JavaScript puro",
-          "Uma biblioteca JavaScript",
-          "Um framework JavaScript",
-          "Um compilador de JavaScript",
-        ],
-        answer: "JavaScript puro",
-      },
-      {
-        question: "Com qual instrução declaramos uma constante em JavaScript?",
-        options: ["const", "let", "var", "define"],
-        answer: "const",
-      },
-      {
-        question: "Qual dos tipos de dado a seguir não existe em JavaScript?",
-        options: ["string", "number", "boolean", "float"],
-        answer: "float",
-      },
-      {
-        question: "Qual dos métodos a seguir seleciona um elemento?",
-        options: ["querySelector", "parseInt", "sort", "reduce"],
-        answer: "querySelector",
-      },
-      {
-        question:
-          "Qual destas propriedades da a quantidade de elementos de um array?",
-        options: ["qty", "length", "items", "index"],
-        answer: "length",
+        question: "Qual animal nos fornece leite?",
+        image: "https://static.vecteezy.com/system/resources/previews/009/349/867/original/cute-cow-cartoon-clipart-png.png",
+        options: ["Cow", "Cat", "Girafa", "Pig"],
+        answer: "Cow",
       },
     ],
   },

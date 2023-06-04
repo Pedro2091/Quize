@@ -5,7 +5,7 @@ import { QuizContext } from "../context/quiz";
 import "./Option.css";
 
 const Option = ({ option, selectOption, answer, hide }) => {
-  const [quizState, dispatch] = useContext(QuizContext);
+  const [ quizState, dispatch ] = useContext(QuizContext);
 
   return (
     <div

@@ -1,6 +1,6 @@
 .option {
-  background-color: #3c0e70;
-  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -17,13 +17,15 @@
 }
 
 .correct {
-  background-color: #0bfc03;
+  background-color: #38C764;
   font-weight: bold;
+  color: #FFFFFF;
 }
 
 .wrong {
-  background-color: #3c0e70;
-  opacity: 0.5;
+  background-color: #FF583F;
+  opacity: 0.8;
+  color: #FFFFFF;
 }
 
 .hide {
