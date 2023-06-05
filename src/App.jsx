@@ -4,6 +4,7 @@ import { QuizContext } from "./context/quiz";
 import Welcome from "./components/Welcome";
 import Question from "./components/Question";
 import GameOver from "./components/GameOver";
+import Credits from "./components/Credits";
 
 
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
     audio.loop = true;
   })
 
+  console.log(quizState.gameStage)
 
 
   return (
@@ -28,6 +30,7 @@ function App() {
       {quizState.gameStage === "Start" && <Welcome />}
       {quizState.gameStage === "Playing" && <Question />}
       {quizState.gameStage === "End" && <GameOver />}
+      {quizState.gameStage === "Credits" && <Credits />}
     </div>
   );
 }

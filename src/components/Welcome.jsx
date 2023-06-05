@@ -21,7 +21,7 @@ const Welcome = () => {
         <button onClick={() => chooseCategoryAndReorderQuestions("HTML")}>
           Começar
         </button>
-        <button>
+        <button onClick={() => dispatch({ type: "CREDITS" })}>
           Créditos
         </button>
       </div>

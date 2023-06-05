@@ -1,0 +1,38 @@
+#gameover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-height: 100%;
+}
+
+#overgame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#gameover p {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+button {
+  padding: 8px 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+
+  color: #000000;
+  background-color: #ffffff;
+  
+}
+
+button:hover{
+  background-color: #dddddd;
+  transition: .2s linear;
+}

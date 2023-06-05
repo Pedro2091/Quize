@@ -1,7 +1,7 @@
 import { createContext, useReducer } from "react";
 import questions from "../data/questions_complete";
 
-const STAGES = ["Start", "Category", "Playing", "End"];
+const STAGES = ["Start", "Category", "Playing", "Credits", "End"];
 
 const initialState = {
   gameStage: STAGES[0],
@@ -107,6 +107,13 @@ const quizReducer = (state, action) => {
         ...state,
         optionToHide,
         help: true,
+      };
+    }
+
+    case "CREDITS": {
+      return {
+        ...state,
+        gameStage: STAGES[3],
       };
     }
 
