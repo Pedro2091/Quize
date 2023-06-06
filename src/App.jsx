@@ -8,7 +8,7 @@ import Credits from "./components/Credits";
 
 
 import "./App.css";
-import Sound from "./components/Sound";
+// import Sound from "./components/Sound";
 
 function App() {
   const [quizState] = useContext(QuizContext);
@@ -32,7 +32,7 @@ function App() {
       {quizState.gameStage === "Playing" && <Question />}
       {quizState.gameStage === "End" && <GameOver />}
       {quizState.gameStage === "Credits" && <Credits />}
-      <Sound/>
+      {/* <Sound/> */}
     </div>
   );
 }
