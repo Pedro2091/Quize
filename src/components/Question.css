@@ -65,3 +65,11 @@
   border-radius: 8px; 
   background: #CFEAE5;
 }
+
+
+#options-container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
+}

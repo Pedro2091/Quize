@@ -24,7 +24,8 @@ const Question = () => {
       <div>
         <div id="question">
           <h1>Quize</h1>
-          <h6>Leia a questão e clique na resposta correta.</h6>
+          <h5>Leia a questão e clique na resposta correta.</h5>
+          <br/>
           <div id="pergunta">
             <div id="number">{quizState.currentQuestion + 1}</div>
             <h3>{currentQuestion.question}</h3>
