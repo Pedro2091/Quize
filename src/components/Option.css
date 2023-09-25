@@ -30,6 +30,13 @@
   color: #FFFFFF;
 }
 
+.select {
+  /* background-color: #f0d041; */
+  border: 5px solid #dfca15;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
 .hide {
   display: none;
 }

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { QuizContext } from "../context/quiz";
 
@@ -9,8 +9,10 @@ import "./Question.css";
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion];
+  const [optionSelected, setOptionSelected] = useState();
 
   const onSelectOption = (option) => {
+    setOptionSelected(option)
     dispatch({
       type: "CHECK_ANSWER",
       payload: { answer: currentQuestion.answer, option },
@@ -36,6 +38,17 @@ const Question = () => {
             }
           </div>
 
+          {quizState.answerSelected && (
+            <div>
+              <h4>{optionSelected === currentQuestion.answer ? "VOCÊ ACERTOU!" : "VOCÊ ERROU..."}</h4>
+              <br/>
+              <span>Você selecionou a opção: <b>{optionSelected}</b></span>
+              <br/>
+              <span>A resposta correta era: <b>{currentQuestion.answer}</b></span>
+              <br/><br/>
+            </div>
+          )}
+
           <div id="options-container">
             {currentQuestion.options.map((option) => (
               <Option
@@ -43,6 +56,7 @@ const Question = () => {
                 key={option}
                 answer={currentQuestion.answer}
                 selectOption={() => onSelectOption(option)}
+                optionSelected={optionSelected}
                 hide={quizState.optionToHide === option ? "hide" : null}
               />
             ))}

@@ -16,12 +16,12 @@ function App() {
 
   // var audio = new Audio('src/assets/music.mp3');
 
-  // useEffect(()=>{
-  //   console.log("oi")
-  //   audio.play();
-  //   audio.volume = 0.4
-  //   audio.loop = true;
-  // })
+  useEffect(()=>{
+    console.log("oi")
+    audio.play();
+    audio.volume = 0.4
+    audio.loop = true;
+  })
 
   console.log(quizState.gameStage)
 
