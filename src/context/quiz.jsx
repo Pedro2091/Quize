@@ -3,6 +3,8 @@ import questions from "../data/questions_complete";
 
 const STAGES = ["Start", "Category", "Playing", "Credits", "End"];
 
+const N_PERGUNTAS = 10
+
 const initialState = {
   gameStage: STAGES[0],
   questions,
@@ -25,9 +27,10 @@ const quizReducer = (state, action) => {
       let quizQuestions = null;
 
       state.questions.forEach((question) => {
-        quizQuestions = question.questions;
+        let array = desordenar(question.questions);
+        quizQuestions = array.slice(0, N_PERGUNTAS);
       });
-
+      
       return {
         ...state,
         questions: quizQuestions,
@@ -128,4 +131,16 @@ export const QuizProvider = ({ children }) => {
   const value = useReducer(quizReducer, initialState);
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
+};
+
+
+const desordenar = (arr) => {
+  const copia = [...arr];
+
+  for (let i = copia.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[j]] = [copia[j], copia[i]];
+  }
+  
+  return copia;
 };
