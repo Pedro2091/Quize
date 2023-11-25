@@ -49,7 +49,7 @@ const Credits = () => {
         </div>
         <div id="quantidade-pergunta">
           <p style={{fontWeight: "550"}}>
-            7° Período CPU - Unincor
+            8° Período CPU - Unincor
           </p>
         </div>
         
