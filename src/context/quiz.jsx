@@ -3,7 +3,7 @@ import questions from "../data/questions_complete";
 
 const STAGES = ["Start", "Category", "Playing", "Credits", "End"];
 
-const N_PERGUNTAS = 10
+const N_PERGUNTAS = 15
 
 const initialState = {
   gameStage: STAGES[0],
